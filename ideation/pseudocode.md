@@ -1,0 +1,25 @@
+Certainly! Let's describe the logic in plain English without using any code-like structure:
+
+1. **Initialize the Questions and Answers:**
+   - Prepare a list of questions. Each question should be accompanied by multiple answer options.
+   - Each answer option should indicate which role it supports or contributes points to when selected.
+
+2. **Set Up Role Scores:**
+   - Create a scoring system where each role starts with zero points.
+
+3. **Display the Quiz:**
+   - Show each question to the user one by one, along with the answer options for them to choose from.
+
+4. **Collect User Answers:**
+   - As the user selects an answer for each question, record their choices. The choice should reflect both the user's answer and the role that answer supports.
+
+5. **Calculate Role Scores Based on Answers:**
+   - For each answer the user has selected, find out which role it contributes to and update the score for that role accordingly. This means adding a point to the respective role's total score every time its associated answer is chosen.
+
+6. **Determine the Winning Role:**
+   - After all questions have been answered and scores have been updated, identify which role has the highest score. This role is considered the "winning" role, suggesting it is the most suitable or dominant role based on the user's answers.
+
+7. **Conclude the Quiz:**
+   - Announce the role that best fits the user according to their answers. This could be the role with the highest score or a combination of roles if there's a tie or if the logic includes interpreting mixed scores.
+
+This sequence of steps outlines the basic flow and logic for creating a quiz where each answer contributes to scoring for specific roles, leading to a final recommendation or conclusion based on the user's selections.
