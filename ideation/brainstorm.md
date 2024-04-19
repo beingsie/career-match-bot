@@ -35,6 +35,10 @@ Bot should be on the left side & quiz to the right as these will stack verticall
 ---
 #### Notes
 
-The amount of iterations of a design that can be limitless, but if your time is spent on `how` rather than the `why`, it will reduce the time you have to implement these iterations & thus never experiementing iterating in the first place.
+- The amount of iterations of a design that can be limitless, but if your time is spent on `how` rather than the `why`, it will reduce the time you have to implement these iterations & thus never experiementing iterating in the first place.
 
-While the number of design iterations can be infinite, it's crucial to focus on the 'why' instead of the 'how'. By understanding the reasons or motivations behind the design decisions, you enable yourself to address the core of the issues or purposes of the design. This focused understanding can lead to more effective and efficient design iterations. If you spend too much time figuring out 'how' to implement the iterations, you might miss out on actually executing and testing these iterations, essentially defeating the whole purpose of iterating. So, concentrate on the 'why', streamline the 'how', and make room for practical experimentation.
+- While the number of design iterations can be infinite, it's crucial to focus on the 'why' instead of the 'how'. By understanding the reasons or motivations behind the design decisions, you enable yourself to address the core of the issues or purposes of the design. This focused understanding can lead to more effective and efficient design iterations. If you spend too much time figuring out 'how' to implement the iterations, you might miss out on actually executing and testing these iterations, essentially defeating the whole purpose of iterating. So, concentrate on the 'why', streamline the 'how', and make room for practical experimentation.
+
+- Add `skip` option regarding bot intro if user decides to retake the quiz. Some users can potentially be discouraged by having to wait for the animations to end rather than using the product first.
+  - `Iterations:`
+    - [ ] Ask the user if they have taken the quiz before
