@@ -97,14 +97,14 @@ const qaQuestions = [
   },
 ];
 
-let userRole = 0;
+// let userRole = 0;
 
-if (userRole === 1) {
-  userRole = "Role 1";
-} else if (userRole === 2) {
-  userRole = "Role 2";
-} else {
-  userRole = "Role 3";
-}
+// if (userRole === 1) {
+//   userRole = "Role 1";
+// } else if (userRole === 2) {
+//   userRole = "Role 2";
+// } else {
+//   userRole = "Role 3";
+// }
 
-console.log("User role is: " + userRole);
+// console.log("User role is: " + userRole);
