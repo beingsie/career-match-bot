@@ -61,6 +61,9 @@ function botChat(userNameValue) {
         }</div>
       `;
     }, 1000);
+    setTimeout(() => {
+      enableButton();
+    }, 3000);
   } else if (counter === 3) {
     setTimeout(() => {
       chatMsg.innerHTML += `
