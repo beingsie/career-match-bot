@@ -1,3 +1,7 @@
+Create a quiz generated from an array or objects, it needs to have 5 questions and each question is multiple choice (4 answers). Each answer belongs to a role (product designer, ui/ux designer, software engineer), for each answer give a point to the role it's associated with. At the end of the quiz you'll get matched to the role picked the most answers to.
+
+---
+
 1. **Initialize the Questions and Answers:**
    - Prepare a list of questions. Each question should be accompanied by multiple answer options.
    - Each answer option should indicate which role it supports or contributes points to when selected.
