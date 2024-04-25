@@ -1,4 +1,4 @@
-const submitButton = document.getElementById("submitBtn");
+const submitButton = document.getElementById("introBtn");
 let counter = 0;
 
 function enableButton() {
@@ -10,10 +10,8 @@ function disableButton() {
 }
 
 const userName = document.getElementById("userName");
-const userNameValue = userName.value.trim();
 
 submitButton.addEventListener("click", (e) => {
-  const userName = document.getElementById("userName");
   const userNameValue = userName.value.trim();
 
   counter += 1;
@@ -84,30 +82,50 @@ function botChat(userNameValue) {
 
 const qaQuestions = [
   {
-    question: "Questions 1",
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    question: "Questions A",
+    answers: ["Answer 1A", "Answer 2A", "Answer 3A", "Answer 4A"],
     role: 1,
+    completed: false
   },
   {
-    question: "Questions 2",
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    question: "Questions B",
+    answers: ["Answer 1B", "Answer 2B", "Answer 3B", "Answer 4B"],
     role: 2,
+    completed: false
   },
   {
-    question: "Questions 3",
-    answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+    question: "Questions C",
+    answers: ["Answer 1C", "Answer 2C", "Answer 3C", "Answer 4C"],
     role: 3,
+    completed: false
   },
 ];
 
-// let userRole = 0;
+const myBtn = document.getElementById("quizBtn");
+const myTitle = document.getElementById("title");
+const questionsList = document.getElementById("questionsList");
+let quizCounter = 0;
 
-// if (userRole === 1) {
-//   userRole = "Role 1";
-// } else if (userRole === 2) {
-//   userRole = "Role 2";
-// } else {
-//   userRole = "Role 3";
-// }
+myBtn.addEventListener("click", () => {
+  quizCounter += 1;
 
-// console.log("User role is: " + userRole);
+  function multipleChoice() {
+    if (quizCounter > 0 && quizCounter <= qaQuestions.length) {
+      myTitle.innerText = qaQuestions[quizCounter - 1].question;
+      questionsList.innerHTML = '';
+      qaQuestions[quizCounter - 1].answers.forEach(answer => {
+        const createBtn = document.createElement('button');
+        createBtn.innerHTML = `<p>${answer}</p>`;
+        questionsList.append(createBtn);
+      });
+      myTitle.innerText = qaQuestions[quizCounter - 1].question;
+    }
+  }
+
+  multipleChoice();
+
+  if (quizCounter > qaQuestions.length) {
+    myTitle.innerText = 'End of Quiz';
+    myBtn.disabled = true;
+  }
+});
