@@ -5,33 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beingsie Inc. | Careers - Role Assesment</title>
     <link rel="stylesheet" href="../src/assets/css/styles.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
-    <div>
-      <h2>Meet &amp; Greet</h2>
-      <p>Tell us more about you</p>
-      <form id="myForm">
-        <label for="userName">First Name or Codedex Username</label>
-        <input
-          id="userName"
-          type="text"
-          name="username"
-          placeholder="e.g. Beingsie"
-          autocomplete="name"
-          required
-        />
-        <button id="introBtn" type="submit">
-          <p>Continue</p>
-        </button>
-      </form>
+    <div class="main">
+      <header>
+        <div class="container">
+          <nav
+            class="flex flex-row items-center justify-between py-10 inconsolata"
+          >
+            <ul>
+              <li>
+                <a href="https://beingsie.com" target="_blank">
+                  <img src="../src/assets/img/logo.svg" alt="Beingsie Inc." />
+                </a>
+              </li>
+            </ul>
+            <ul class="flex flex-row items-center gap-8">
+              <li>
+                <a href="https://beingsie.com" target="_blank">Home</a>
+              </li>
+              <li>
+                <a href="https://beingsie.com" target="_blank">FAQ</a>
+              </li>
+              <li>
+                <a href="https://beingsie.com" target="_blank">
+                  <div class="flex flex-row items-center gap-8">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <p>#30NitesOfCode</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section>
+        <div>
+          <p>Build the next web with us</p>
+          <h1 class="jersey text-7xl capitalize flex flex-col">
+            <span>Where creative</span>
+            <span>solutioneers thrive</span>
+          </h1>
+          <p>Available roles <span>@kodetechyinc.</span></p>
+        </div>
+        <div id="tagStack"></div>
+      </section>
+      <div>
+        <p class="title">Available Roles</p>
+        <h1 class="jersey">@Kodetechy Inc.</h1>
+        <form id="myForm">
+          <label for="userName">First Name or Codedex Username</label>
+          <input
+            id="userName"
+            type="text"
+            name="username"
+            placeholder="Applicant Name"
+            autocomplete="name"
+            required
+          />
+          <button id="introBtn" type="submit">
+            <p>Next</p>
+          </button>
+        </form>
+      </div>
+      <div class="chat-icon"></div>
+      <div id="chatMsg"></div>
+      <h1 id="title" class="jersey">Let's Begin</h1>
+      <div id="questionsList"></div>
+      <button id="quizBtn">
+        <p>Start Assesment</p>
+      </button>
     </div>
-    <div class="chat-icon"></div>
-    <div id="chatMsg"></div>
-    <h1 id="title">Let's Begin</h1>
-    <div id="questionsList"></div>
-    <button id="quizBtn">
-      <p>Continue</p>
-    </button>
     <!-- Scripts -->
     <script src="../src/assets/js/app.js"></script>
   </body>

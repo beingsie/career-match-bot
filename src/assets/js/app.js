@@ -22,7 +22,7 @@ submitButton.addEventListener("click", (e) => {
 
 function getFormattedTimestamp() {
   const dateNow = new Date();
-  const options = { hour12: true, hour: "numeric", minute: "2-digit" };
+  const options = { hour12: true, hour: "numeric", minute: "2-digit", second: "2-digit" };
   return dateNow.toLocaleTimeString(undefined, options);
 }
 
@@ -36,49 +36,33 @@ function botChat(userNameValue) {
     "Good luck ~",
   ];
 
-  if (counter === 1) {
-    setTimeout(() => {
+  function chatBotMessage() {
+    if (counter > 0 && counter <= chatBotMessages.length) {
+      const msg = chatBotMessages[counter - 1];
       chatMsg.innerHTML += `
-        <div class="chatBotMsg"><span class="timestamp">${getFormattedTimestamp()}:</span> ${chatBotMessages[0]
-        }</div>
+        <div>
+          <div>
+            <p>Guide Bot</p>
+            <p class="timestamp">${getFormattedTimestamp()}</p>
+          </div>
+          <div class="chatBotMsg">
+            <p>${msg}</p>
+          </div>
+        </div>
       `;
-    }, 1000);
-    setTimeout(() => {
-      chatMsg.innerHTML += `
-        <div class="chatBotMsg"><span class="timestamp">${getFormattedTimestamp()}:</span> ${chatBotMessages[1]
-        }</div>
-      `;
-    }, 3000);
-    setTimeout(() => {
-      enableButton();
-    }, 4000);
-  } else if (counter === 2) {
-    setTimeout(() => {
-      chatMsg.innerHTML += `
-        <div class="chatBotMsg"><span class="timestamp">${getFormattedTimestamp()}:</span> ${chatBotMessages[2]
-        }</div>
-      `;
-    }, 1000);
-    setTimeout(() => {
-      enableButton();
-    }, 3000);
-  } else if (counter === 3) {
-    setTimeout(() => {
-      chatMsg.innerHTML += `
-        <div class="chatBotMsg"><span class="timestamp">${getFormattedTimestamp()}:</span> ${chatBotMessages[3]
-        }</div>
-      `;
-    }, 1000);
-    setTimeout(() => {
-      chatMsg.innerHTML += `
-        <div class="chatBotMsg"><span class="timestamp">${getFormattedTimestamp()}:</span> ${chatBotMessages[4]
-        }</div>
-      `;
-    }, 3000);
+    } else {
+      console.log("Counter is " + counter + ", no more new messages.");
+    }
+  }
+
+  setTimeout(chatBotMessage, 1000);
+  if (counter < chatBotMessages.length) {
+    setTimeout(enableButton, 1500);
   } else {
-    console.log("Counter is " + counter + ", no messages to display.");
+    console.log("No more messages to display.");
   }
 }
+
 
 const qaQuestions = [
   {
@@ -129,3 +113,15 @@ myBtn.addEventListener("click", () => {
     myBtn.disabled = true;
   }
 });
+
+const tagStack = document.getElementById("tagStack");
+const tags = ["CEO", "Social Media Manager", "Co-Founder", "Backend Software Engineer", "Svelte Developer", "Product Designer", "Designer Engineer", "DevOps Engineer", "Data Scientist", "UI/UX Designer"];
+
+for (let i = 0; i < tags.length; i++) {
+  let tag = tags[i];
+  tagStack.innerHTML += `
+    <div class="tag">
+      <p>${tag}</p>
+    </div>
+    `;
+}
